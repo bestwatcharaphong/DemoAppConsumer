@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/loading"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/consumer_has_scan_qr_code_completely"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/please_wait_for_processing"/>
+
+    <ImageView
+        android:id="@+id/imgLoading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_loading"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"/>
+
+</LinearLayout>

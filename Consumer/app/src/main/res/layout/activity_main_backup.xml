@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.promptnow.qrpayment.consumer.activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/btnSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round_rect_button_green"
+            android:src="@drawable/ic_settings_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/title_main"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.promptnow.qrpayment.consumer.view.CustomButonHiostory
+            android:id="@+id/btnHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp">
+
+        </com.promptnow.qrpayment.consumer.view.CustomButonHiostory>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvLastLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/last_login"
+        android:textColor="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/CardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvLastLogin"
+        android:layout_marginTop="8dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clipToPadding="false" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/accountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnLayout"
+        android:layout_below="@id/CardLayout"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="20sp">
+
+        <LinearLayout
+            android:id="@+id/CardNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCard"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="@string/card_name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="right"
+                android:text="@string/my_name"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineCardName"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/CardNameLayout"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/CardNoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CardNameLayout"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="@string/card_no"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCardNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="right"
+                android:text="@string/card_no"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/CardNoLayout"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/balanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CardNoLayout"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="@string/available_balance"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.promptnow.qrpayment.consumer.utill.MoneyTextView
+                android:id="@+id/tvCardBalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:inputType="phone"
+                android:text="50"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="bottom"
+                android:text="@string/jpy"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/balanceLayout"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true">
+
+        <com.promptnow.qrpayment.consumer.view.CustomButtonQR
+            android:id="@+id/btnGenQR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" android:layout_weight="1"/>
+
+        <com.promptnow.qrpayment.consumer.view.CustomButtonScanQR
+            android:id="@+id/btnScanQR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.promptnow.qrpayment.consumer.activity.GenQRActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/gen_qr"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tvNonCount"
+        android:layout_below="@id/toolBar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="QR Code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgQRCode"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_round_rect_button_green"
+            android:src="@drawable/ic_qrcde" />
+
+        <TextView
+            android:id="@+id/tvBarCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/bar_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgBarCode"
+            android:layout_width="240dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shap_round_rect_button_add"
+            android:padding="8dp"
+            android:src="@drawable/ic_barcode" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNonCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvCount"
+        android:layout_centerHorizontal="true"
+        android:text="@string/count_down"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="( )"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp" />
+
+</RelativeLayout>

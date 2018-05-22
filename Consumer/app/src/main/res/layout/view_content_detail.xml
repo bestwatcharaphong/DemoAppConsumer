@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Content"
+        android:textSize="20sp" />
+
+    <com.promptnow.qrpayment.consumer.utill.MoneyTextView
+        android:id="@+id/tvMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@id/tvContent"
+        android:layout_toStartOf="@+id/tvJpy"
+        android:gravity="right"
+        android:text="MoneyContent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvJpy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/jpy"
+        android:textSize="14sp" />
+
+</RelativeLayout>
